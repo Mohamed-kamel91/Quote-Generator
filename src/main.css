@@ -1,0 +1,128 @@
+/* 1.font imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+
+/* 2.presets  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: currentColor;
+}
+
+button {
+  font-family: inherit;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* 3.General Styling */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.quote-wrapper {
+  display: flex;
+  width: 70%;
+}
+
+/* 3.a.Mark */
+.mark-box {
+  height: 300px;
+}
+
+.left-mark {
+  font-family: 'Yeseva One', cursive;
+  font-size: 500px;
+}
+
+/* 3.b.Quote */
+#quote-box {
+  width: 100%;
+  margin-top: 160px;
+}
+
+#text {
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 1.2;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+#author {
+  font-size: 25px;
+  font-weight: 200;
+  font-style: italic;
+  display: block;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 700ms ease-in-out;
+}
+
+/*3.c.Buttons  */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#new-quote {
+  font-size: 20px;
+  font-weight: 200;
+  border-radius: 2px;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 20px 30px;
+  margin-bottom: 10px;
+  transition: background-color 250ms ease-in-out;
+}
+
+#new-quote:hover {
+  background-color: #1f1f1f;
+}
+
+#tweet-quote {
+  font-size: 30px;
+  transition: color 250ms ease-in-out; 
+}
+
+#tweet-quote:hover {
+  color: #0F9AFB;
+}
+
+
+
+
