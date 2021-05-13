@@ -15,11 +15,13 @@ function App () {
     const quotesApi = fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
-        const allQuotes = data // array contains all quotes objects
-        const quote = data[Math.floor(Math.random() * data.length)] // get a random quote object
+        // remove all objects whose author is "null" and create a newly filtered array
+        const filteredQuotes = data.filter(quote => quote.author) 
+        console.log(filteredQuotes)
+        const quote = filteredQuotes[Math.floor(Math.random() * data.length)] // get a random quote object
         setText(quote.text) 
         setAuthor(quote.author)
-        setQuotes(allQuotes)
+        setQuotes(filteredQuotes)
         setOpacity("visible")
       })
   }, [])
@@ -34,8 +36,7 @@ function App () {
 
   // Change quote every time the "new quote" button is pressed
   function changeQuote(quotes, changeOpacity) {
-    // remove all objects whose author is "null" and get a random quote from the filtered array
-    const quote = quotes.filter(quote => quote.author)[Math.floor(Math.random() * quotes.length)]
+    const quote = quotes[Math.floor(Math.random() * quotes.length)]
     setText(quote.text)
     setAuthor(quote.author)
     changeOpacity()

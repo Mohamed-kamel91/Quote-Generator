@@ -44,6 +44,7 @@ button:focus {
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
+  min-height: 100vh;
 }
 
 .quote-wrapper {
@@ -63,7 +64,6 @@ button:focus {
 
 /* 3.b.Quote */
 #quote-box {
-  width: 100%;
   margin-top: 160px;
 }
 
@@ -73,6 +73,7 @@ button:focus {
   line-height: 1.2;
   display: inline-block;
   margin-bottom: 20px;
+  word-break: break-word;
 }
 
 #author {
@@ -123,6 +124,112 @@ button:focus {
   color: #0F9AFB;
 }
 
+@media (max-width: 1400px) {
+  .quote-wrapper {
+    width: 80%;
+  }
+  .left-mark {
+    font-size: 450px;
+  }
+  #text {
+    font-size: 45px;
+  }
+  #author {
+    font-size: 23px;
+  }
+  #new-quote {
+    font-size: 18px;
+    padding: 18px 28px;
+  }
+}
 
+@media (max-width: 1200px) {
+  .quote-wrapper {
+    width: 70%;
+  }
+  .left-mark {
+    font-size: 400px;
+  }
+  #text {
+    font-size: 40px;
+  }
+  #author {
+    font-size: 21px;
+  }
+  #new-quote {
+    font-size: 16px;
+    padding: 16px 26px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding-top: 80px;
+  }
+  .quote-wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding-top: 100px;
+  }
+  .quote-wrapper {
+    width: 80%;
+  }
+  .left-mark {
+    font-size: 350px;
+  }
+  #text {
+    font-size: 35px;
+  }
+  #author {
+    font-size: 19px;
+  }
+  #new-quote {
+    font-size: 14px;
+    padding: 14px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding-top: 165px;
+  }
+  .quote-wrapper {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .mark-box {
+    height: 100%;
+  }
+  .left-mark {
+    font-size: 140px;
+  }
+
+  #quote-box {
+    margin-top: 45px;
+  }
+  #text {
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+  #author {
+    font-size: 14px;
+  }
+  #new-quote {
+    font-size: 11px;
+    padding: 10px 14px;
+  }
+
+  .buttons {
+    margin-top: 35px;
+  }
+  #tweet-quote {
+    font-size: 23px;
+  }
+}
 
 
